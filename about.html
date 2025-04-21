@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | CleanPro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Maps API (Replace KEY with your API key) -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation Bar (Same as Homepage) -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Clean<span>Pro</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn">Book Now</a></li>
+      </ul>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <h1>More Than Just Cleaning</h1>
+        <p>
+          We’re a locally owned team dedicated to making your home healthier and
+          happier.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="our-story">
+      <h2>Our Story</h2>
+      <div class="story-timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-content">
+            <h3>Founded in a Small Garage</h3>
+            <p>
+              Started with just two people and a dream to provide affordable,
+              eco-friendly cleaning.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <h3>Added Fumigation Services</h3>
+            <p>
+              Expanded to help families combat pests safely after a local bed
+              bug outbreak.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>Serving 1,000+ Homes</h3>
+            <p>
+              Now a team of 15 professionals covering the entire metro area.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="team bg-gray">
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="images/team1.jpg" alt="Sarah Johnson" loading="lazy" />
+          <h3>Sarah Johnson</h3>
+          <p class="role">Founder & CEO</p>
+          <p>EPA-certified in pest control with 10+ years of experience.</p>
+        </div>
+        <div class="team-card">
+          <img src="images/team2.jpg" alt="Michael Chen" loading="lazy" />
+          <h3>Michael Chen</h3>
+          <p class="role">Lead Cleaner</p>
+          <p>Specializes in deep cleaning and allergen reduction.</p>
+        </div>
+        <div class="team-card">
+          <img src="images/team3.jpg" alt="David Rodriguez" loading="lazy" />
+          <h3>David Rodriguez</h3>
+          <p class="role">Fumigation Expert</p>
+          <p>Licensed in heat treatments and chemical safety.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values">
+      <h2>Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Eco-Friendly</h3>
+          <p>
+            We use non-toxic, biodegradable products safe for kids and pets.
+          </p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Reliable</h3>
+          <p>100% satisfaction guarantee with licensed, insured technicians.</p>
+        </div>
+        <div class="value-card">
+          <i class="fas fa-heart"></i>
+          <h3>Community</h3>
+          <p>We donate 5% of profits to local homeless shelters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="service-area bg-gray">
+      <h2>We Serve These Areas</h2>
+      <div id="map"></div>
+      <div class="area-list">
+        <h3>Cities Covered:</h3>
+        <ul>
+          <li>Seattle</li>
+          <li>Bellevue</li>
+          <li>Redmond</li>
+          <li>Kirkland</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+      <h2>Ready to Experience the CleanPro Difference?</h2>
+      <a href="booking.html" class="btn">Book Your Service</a>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer>
+      <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

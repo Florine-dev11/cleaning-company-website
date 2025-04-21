@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | CleanPro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation Bar (Same as Homepage) -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Clean<span>Pro</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="booking.html" class="btn">Book Now</a></li>
+      </ul>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+      <h1>Get in Touch</h1>
+      <p>
+        We're here to help! Reach out for inquiries, emergencies, or feedback.
+      </p>
+    </section>
+
+    <!-- Emergency Hotline -->
+    <section class="emergency-cta">
+      <div class="emergency-content">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h2>24/7 Fumigation Emergency?</h2>
+        <p>Call now for immediate assistance with pests or infestations.</p>
+        <a href="tel:+1234567890" class="btn emergency-btn">
+          <i class="fas fa-phone"></i> (123) 456-7890
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Layout -->
+    <section class="contact-layout">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name*</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service">
+              <option value="" selected>Select a service</option>
+              <option value="cleaning">House Cleaning</option>
+              <option value="fumigation">Fumigation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message*</label>
+            <textarea
+              id="message"
+              required
+              placeholder="e.g., 'I need a quote for deep cleaning...'"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Visit or Call Us</h2>
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Our Office</h3>
+          <p>123 Clean Street, Seattle, WA 98101</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <h3>Business Hours</h3>
+          <p>Mon-Fri: 8AM - 6PM<br />Sat: 9AM - 4PM<br />Sun: Closed</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <h3>General Inquiries</h3>
+          <p>
+            <a href="tel:+1234567890">(123) 456-7890</a><br />
+            <a href="mailto:info@cleanpro.com">info@cleanpro.com</a>
+          </p>
+        </div>
+
+        <!-- Google Map -->
+        <div id="contactMap"></div>
+
+        <!-- FAQ Quick Links -->
+        <div class="faq-links">
+          <h3>Quick Answers</h3>
+          <ul>
+            <li>
+              <a href="services.html#faq">How do I prepare for fumigation?</a>
+            </li>
+            <li><a href="services.html#faq">Are your products pet-safe?</a></li>
+            <li><a href="booking.html">How do I reschedule?</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-yelp"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer>
+      <!-- Copy footer from index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

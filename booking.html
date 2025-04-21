@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Service | CleanPro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Flatpickr for date/time picker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar (Same as Homepage) -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Clean<span>Pro</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn active">Book Now</a></li>
+      </ul>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Booking Header -->
+    <section class="booking-header">
+      <h1>Book Your Service</h1>
+      <p>Fill out the form below to schedule your cleaning or fumigation.</p>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form">
+      <form id="bookingForm">
+        <!-- Step 1: Service Selection -->
+        <div class="form-step active" data-step="1">
+          <h2><span>1</span> Choose a Service</h2>
+          <div class="form-group">
+            <label for="service">Service Type*</label>
+            <select id="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="regular_cleaning" data-price="99">
+                Regular Cleaning ($99)
+              </option>
+              <option value="deep_cleaning" data-price="199">
+                Deep Cleaning ($199)
+              </option>
+              <option value="move_cleaning" data-price="249">
+                Move-In/Out Cleaning ($249)
+              </option>
+              <option value="bed_bugs" data-price="299">
+                Bed Bug Treatment ($299)
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="frequency">Frequency*</label>
+            <select id="frequency">
+              <option value="one_time" selected>One-Time</option>
+              <option value="weekly">Weekly</option>
+              <option value="biweekly">Bi-Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Add-Ons</label>
+            <div class="add-ons">
+              <label>
+                <input
+                  type="checkbox"
+                  name="addon"
+                  value="carpet"
+                  data-price="50"
+                />
+                Carpet Cleaning (+$50)
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="addon"
+                  value="windows"
+                  data-price="30"
+                />
+                Window Washing (+$30)
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn next-step">Next</button>
+        </div>
+
+        <!-- Step 2: Date & Time -->
+        <div class="form-step" data-step="2">
+          <h2><span>2</span> Select Date & Time</h2>
+          <div class="form-group">
+            <label for="date">Preferred Date*</label>
+            <input type="text" id="date" placeholder="Select date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="time">Preferred Time*</label>
+            <select id="time" required>
+              <option value="" disabled selected>Select time</option>
+              <option value="8-11">8:00 AM - 11:00 AM</option>
+              <option value="11-2">11:00 AM - 2:00 PM</option>
+              <option value="2-5">2:00 PM - 5:00 PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special Instructions</label>
+            <textarea
+              id="notes"
+              placeholder="e.g., 'Focus on kitchen' or 'Pet in home'"
+            ></textarea>
+          </div>
+
+          <div class="step-buttons">
+            <button type="button" class="btn prev-step">Back</button>
+            <button type="button" class="btn next-step">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact Details -->
+        <div class="form-step" data-step="3">
+          <h2><span>3</span> Your Information</h2>
+          <div class="form-group">
+            <label for="name">Full Name*</label>
+            <input type="text" id="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input type="tel" id="phone" required />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address*</label>
+            <textarea
+              id="address"
+              required
+              placeholder="Street, City, ZIP"
+            ></textarea>
+          </div>
+
+          <div class="step-buttons">
+            <button type="button" class="btn prev-step">Back</button>
+            <button type="button" class="btn" id="calculatePrice">
+              Calculate Total
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Summary & Payment -->
+        <div class="form-step" data-step="4">
+          <h2><span>4</span> Confirm Booking</h2>
+          <div class="summary-card">
+            <h3>Order Summary</h3>
+            <div id="summaryDetails">
+              <!-- Filled by JavaScript -->
+            </div>
+            <div class="total">
+              <h4>Total:</h4>
+              <span id="totalPrice">$0</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="promo">Promo Code (Optional)</label>
+            <input type="text" id="promo" placeholder="e.g., CLEAN20" />
+          </div>
+
+          <div class="step-buttons">
+            <button type="button" class="btn prev-step">Back</button>
+            <button type="submit" class="btn">Confirm & Pay</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer (Same as Homepage) -->
+    <footer>
+      <!-- Copy footer from index.html -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
